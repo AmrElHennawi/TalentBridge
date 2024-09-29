@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentBride.Api", "TalentBride.Api\TalentBride.Api.csproj", "{6D5BA322-A39A-40D3-A2F3-30DFFA4250F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentBridge.Entities", "TalentBridge.Entities\TalentBridge.Entities.csproj", "{820A776F-28FA-4822-B5F2-02D0825F8574}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentBridge.DataContext", "TalentBridge.DataContext\TalentBridge.DataContext.csproj", "{9F051B0C-EDDB-49DC-AA97-63394E53924D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentBridge.DataAccess", "TalentBridge.DataAccess\TalentBridge.DataAccess.csproj", "{69CA2524-2A9C-4503-8DBE-B495D4507543}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentBridge.Application", "TalentBridge.Application\TalentBridge.Application.csproj", "{D6396C83-5DE8-4477-B2E8-9EEA6F0FE832}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D5BA322-A39A-40D3-A2F3-30DFFA4250F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D5BA322-A39A-40D3-A2F3-30DFFA4250F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D5BA322-A39A-40D3-A2F3-30DFFA4250F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D5BA322-A39A-40D3-A2F3-30DFFA4250F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{820A776F-28FA-4822-B5F2-02D0825F8574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{820A776F-28FA-4822-B5F2-02D0825F8574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{820A776F-28FA-4822-B5F2-02D0825F8574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{820A776F-28FA-4822-B5F2-02D0825F8574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F051B0C-EDDB-49DC-AA97-63394E53924D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F051B0C-EDDB-49DC-AA97-63394E53924D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F051B0C-EDDB-49DC-AA97-63394E53924D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F051B0C-EDDB-49DC-AA97-63394E53924D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69CA2524-2A9C-4503-8DBE-B495D4507543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69CA2524-2A9C-4503-8DBE-B495D4507543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69CA2524-2A9C-4503-8DBE-B495D4507543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69CA2524-2A9C-4503-8DBE-B495D4507543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6396C83-5DE8-4477-B2E8-9EEA6F0FE832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6396C83-5DE8-4477-B2E8-9EEA6F0FE832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6396C83-5DE8-4477-B2E8-9EEA6F0FE832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6396C83-5DE8-4477-B2E8-9EEA6F0FE832}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFA7C989-0683-4489-B9DE-EF812FC4962D}
+	EndGlobalSection
+EndGlobal
