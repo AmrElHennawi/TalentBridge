@@ -1,0 +1,13 @@
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\bin\Debug\net8.0\TalentBridge.Entities.deps.json
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\bin\Debug\net8.0\TalentBridge.Entities.dll
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\bin\Debug\net8.0\TalentBridge.Entities.pdb
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.AssemblyInfoInputs.cache
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.AssemblyInfo.cs
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.sourcelink.json
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.dll
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\refint\TalentBridge.Entities.dll
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.pdb
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\ref\TalentBridge.Entities.dll
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.csproj.AssemblyReference.cache

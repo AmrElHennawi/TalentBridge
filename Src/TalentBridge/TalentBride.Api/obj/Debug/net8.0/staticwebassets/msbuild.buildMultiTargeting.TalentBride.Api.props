@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TalentBride.Api.props" />
+</Project>
