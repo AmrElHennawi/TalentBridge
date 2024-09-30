@@ -45,19 +45,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Amr Khaled\\.nuget\\packages\\": {}
+    "C:\\Users\\lenovo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj",
+      "projectUniqueName": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj",
       "projectName": "TalentBridge.DataAccess",
-      "projectPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj",
-      "packagesPath": "C:\\Users\\Amr Khaled\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\obj\\",
+      "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+      "outputPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Amr Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -72,8 +77,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj": {
-              "projectPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj"
+            "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj": {
+              "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj"
             }
           }
         }
