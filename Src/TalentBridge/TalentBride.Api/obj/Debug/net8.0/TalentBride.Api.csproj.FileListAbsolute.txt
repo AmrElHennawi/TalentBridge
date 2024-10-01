@@ -300,3 +300,6 @@ E:\Projects\TalentBridge\Src\TalentBridge\TalentBride.Api\obj\Debug\net8.0\refin
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBride.Api\obj\Debug\net8.0\TalentBride.Api.pdb
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBride.Api\obj\Debug\net8.0\TalentBride.Api.genruntimeconfig.cache
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBride.Api\obj\Debug\net8.0\ref\TalentBride.Api.dll
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBride.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBride.Api\bin\Debug\net8.0\TalentBridge.Core.dll
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBride.Api\bin\Debug\net8.0\TalentBridge.Core.pdb

@@ -815,24 +815,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lenovo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Amr Khaled\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\TalentBridge.Entities.csproj",
+      "projectUniqueName": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\TalentBridge.Entities.csproj",
       "projectName": "TalentBridge.Entities",
-      "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\TalentBridge.Entities.csproj",
-      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\obj\\",
+      "projectPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\TalentBridge.Entities.csproj",
+      "packagesPath": "C:\\Users\\Amr Khaled\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Amr Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -38,3 +38,5 @@ E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Application\obj\Debug\net
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Application\obj\Debug\net8.0\refint\TalentBridge.Application.dll
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Application\obj\Debug\net8.0\TalentBridge.Application.pdb
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Application\obj\Debug\net8.0\ref\TalentBridge.Application.dll
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Application\bin\Debug\net8.0\TalentBridge.Core.dll
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Application\bin\Debug\net8.0\TalentBridge.Core.pdb
