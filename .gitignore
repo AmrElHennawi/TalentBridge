@@ -1,2 +1,22 @@
 # Ignore Visual Studio files
 .vs/
+# Ignore build output directories
+bin/
+obj/
+
+# Ignore NuGet packages
+packages/
+
+# Ignore Visual Studio user-specific files
+.vs/
+*.user
+*.suo
+
+# Ignore local development settings
+Properties/launchSettings.json
+
+# Ignore sensitive data
+appsettings.Development.json
+
+# Optional: Ignore Mac/Linux hidden system files
+.DS_Store

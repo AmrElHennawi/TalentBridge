@@ -16,3 +16,21 @@ C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\
 C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\refint\TalentBridge.DataAccess.dll
 C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\TalentBridge.DataAccess.pdb
 C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\ref\TalentBridge.DataAccess.dll
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\bin\Debug\net8.0\TalentBridge.DataAccess.deps.json
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\bin\Debug\net8.0\TalentBridge.DataAccess.dll
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\bin\Debug\net8.0\TalentBridge.DataAccess.pdb
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\bin\Debug\net8.0\TalentBridge.DataContext.dll
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\bin\Debug\net8.0\TalentBridge.Entities.dll
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\bin\Debug\net8.0\TalentBridge.DataContext.pdb
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\bin\Debug\net8.0\TalentBridge.Entities.pdb
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\TalentBridge.DataAccess.csproj.AssemblyReference.cache
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\TalentBridge.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\TalentBridge.DataAccess.AssemblyInfoInputs.cache
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\TalentBridge.DataAccess.AssemblyInfo.cs
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\TalentBridge.DataAccess.csproj.CoreCompileInputs.cache
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\TalentBridge.DataAccess.sourcelink.json
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\TalentBr.95141F85.Up2Date
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\TalentBridge.DataAccess.dll
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\refint\TalentBridge.DataAccess.dll
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\TalentBridge.DataAccess.pdb
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\ref\TalentBridge.DataAccess.dll

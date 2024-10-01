@@ -11,3 +11,16 @@ C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\
 C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.pdb
 C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\ref\TalentBridge.Entities.dll
 C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.csproj.AssemblyReference.cache
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\bin\Debug\net8.0\TalentBridge.Entities.deps.json
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\bin\Debug\net8.0\TalentBridge.Entities.dll
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\bin\Debug\net8.0\TalentBridge.Entities.pdb
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.csproj.AssemblyReference.cache
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.AssemblyInfoInputs.cache
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.AssemblyInfo.cs
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.csproj.CoreCompileInputs.cache
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.sourcelink.json
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.dll
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\refint\TalentBridge.Entities.dll
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.pdb
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\ref\TalentBridge.Entities.dll
