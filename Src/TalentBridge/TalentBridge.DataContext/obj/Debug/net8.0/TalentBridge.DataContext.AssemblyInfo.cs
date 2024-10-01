@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TalentBridge.DataContext")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+408ae3a6f9713177726e65a7b98d7b677b355f0d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3e1771eeb84256ecf6892e604e80265ab20ce21")]
 [assembly: System.Reflection.AssemblyProductAttribute("TalentBridge.DataContext")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TalentBridge.DataContext")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

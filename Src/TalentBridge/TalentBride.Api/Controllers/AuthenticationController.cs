@@ -20,20 +20,14 @@ namespace TalentBride.Api.Controllers
 			_userManager = userManager;
 		}
 		//[HttpPost("login")]
-		[HttpGet]
-		[AllowAnonymous]
-		public async Task<ActionResult> Login()
-		{
-			return Ok(_tokenService.createToken());
-		}
-
-		//[HttpPost("register")]
+		//[HttpGet]
 		//[AllowAnonymous]
-		//public async Task<ActionResult> Register(NewUserDataDto data)
+		//public async Task<ActionResult> Login()
 		//{
-		//	var token = await _unitOfWork.Users.Register(data);
-		//	await _unitOfWork.CompleteAsync();
-		//	return Ok(token);
+            
+            //return Ok(_tokenService.GenerateToken(user,true));
 		//}
+
+		
 	}
 }

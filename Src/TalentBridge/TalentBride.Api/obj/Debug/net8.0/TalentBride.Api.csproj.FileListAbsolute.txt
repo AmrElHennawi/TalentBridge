@@ -303,3 +303,6 @@ E:\Projects\TalentBridge\Src\TalentBridge\TalentBride.Api\obj\Debug\net8.0\ref\T
 C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBride.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBride.Api\bin\Debug\net8.0\TalentBridge.Core.dll
 C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBride.Api\bin\Debug\net8.0\TalentBridge.Core.pdb
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBride.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBride.Api\bin\Debug\net8.0\TalentBridge.Core.dll
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBride.Api\bin\Debug\net8.0\TalentBridge.Core.pdb
