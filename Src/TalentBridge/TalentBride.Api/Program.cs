@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using TalentBridge.Application.ExtentionMethods;
 using TalentBridge.Application.Services;
 using TalentBridge.Core.Settings;
 using TalentBridge.DataContext;
@@ -22,6 +23,7 @@ namespace TalentBride.Api
 
 			// Other services
 			builder.Services.AddScoped<TokenService>();
+            builder.Services.AddService();
 
 			// Add services to the container.
 
