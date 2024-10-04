@@ -42,9 +42,6 @@ namespace TalentBridge.Application.Services
 
             return tokenString;
         }
-		//public string createToken()
-		//{
-		//	return _jwtSettings.SecretKey;
-		//}
+
 	}
 }
