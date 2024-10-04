@@ -30,17 +30,31 @@ namespace TalentBride.Api.Controllers
         {
             try
             {
-                var token = _authenticationService.Login(loginData);
+                var token = await _authenticationService.login(loginData);
                 return Ok(token);
             }
             catch (UnauthorizedAccessException ex)
             {
-                return Unauthorized(new { message = "Invalid login credentials" });
+                return Unauthorized(ex.Message);
             }
-        }
+            catch (Exception ex)
+            {
+	            return BadRequest(ex.Message);
+            }
+		}
 
-        
-
-
+        [HttpPost("Register")]
+        public async Task<IActionResult> Register(RegisterationDTO registerData)
+        {
+	        try
+	        {
+		        var token = await _authenticationService.register(registerData);
+		        return Ok(token);
+	        }
+	        catch (Exception ex)
+	        {
+		        return BadRequest(ex.Message);
+	        }
+		}
 	}
 }
