@@ -13,15 +13,12 @@ namespace TalentBride.Api.Controllers
 	[ApiController]
 	public class AuthenticationController : ControllerBase
 	{
-		
-		private readonly UserManager<AppUser> _userManager;
         private readonly AuthenticationService _authenticationService;
 
 
-        public AuthenticationController(AuthenticationService authenticationService, UserManager<AppUser> userManager)
+        public AuthenticationController(AuthenticationService authenticationService)
 		{
 			_authenticationService = authenticationService;
-			_userManager = userManager;
 
 		}
 
