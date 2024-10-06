@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using TalentBridge.Application.DTOs;
 using TalentBridge.Application.Services;
-using TalentBridge.Entities;
 
 namespace TalentBride.Api.Controllers
 {

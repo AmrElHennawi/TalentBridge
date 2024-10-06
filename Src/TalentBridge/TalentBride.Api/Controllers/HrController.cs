@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using TalentBridge.Application.DTOs;
 using TalentBridge.Application.Services;
-using TalentBridge.Entities;
 
 namespace TalentBride.Api.Controllers
 {
@@ -40,6 +39,35 @@ namespace TalentBride.Api.Controllers
 			{
 				var addedHr = await _hrService.addHr(hr);
 				return Ok(addedHr);
+			}
+			catch (Exception ex)
+			{
+				return BadRequest(ex.Message);
+			}
+		}
+
+
+		[HttpPut("UpdateHr/{id}")]
+		public async Task<IActionResult> UpdateHr(string id, UpdateInfoDTO hr)
+		{
+			try
+			{
+				var updatedHr = await _hrService.updateHr(id, hr);
+				return Ok(updatedHr);
+			}
+			catch (Exception ex)
+			{
+				return BadRequest(ex.Message);
+			}
+		}
+
+		[HttpDelete("RemoveHr/{id}")]
+		public async Task<IActionResult> RemoveHr(string id)
+		{
+			try
+			{
+				await _hrService.removeHr(id);
+				return Ok("HR deleted successfully.");
 			}
 			catch (Exception ex)
 			{

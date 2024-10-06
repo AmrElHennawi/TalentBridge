@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TalentBridge.Application.DTOs;
 using TalentBridge.Entities;
@@ -75,6 +70,44 @@ namespace TalentBridge.Application.Services
             }
 
             return hr;
+        }
+
+        public async Task<AppUser> updateHr(string id, UpdateInfoDTO registerData)
+        {
+            var hr = await _userManager.FindByIdAsync(id);
+            if (hr == null)
+            {
+                throw new Exception("User not found.");
+            }
+
+            hr.FirstName = registerData.FirstName;
+            hr.LastName = registerData.LastName;
+            hr.Email = registerData.Email;
+            hr.PhoneNumber = registerData.PhoneNumber;
+            hr.UserName = registerData.Username;
+
+            var updateResult = await _userManager.UpdateAsync(hr);
+            if (!updateResult.Succeeded)
+            {
+                throw new Exception("Failed to update user: " + string.Join(", ", updateResult.Errors.Select(e => e.Description)));
+            }
+
+            return hr;
+        }
+
+        public async Task removeHr(string id)
+        {
+            var hr = await _userManager.FindByIdAsync(id);
+            if (hr == null)
+            {
+                throw new Exception("User not found.");
+            }
+
+            var deleteResult = await _userManager.DeleteAsync(hr);
+            if (!deleteResult.Succeeded)
+            {
+                throw new Exception("Failed to delete user: " + string.Join(", ", deleteResult.Errors.Select(e => e.Description)));
+            }
         }
 
     }
