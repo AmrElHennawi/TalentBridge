@@ -39,25 +39,6 @@ namespace TalentBride.Api.Controllers
 			return Ok(Hr);
 		}
 
-
-		//[HttpGet("GetMyHr")]
-		//[Authorize(Roles = "Hr")]
-		//public async Task<IActionResult> GetMyHrAsync()
-		//{
-		//	var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-		//	if (userId == null)
-		//	{
-		//		return BadRequest("User ID not found in token.");
-		//	}
-
-		//	var hr = await _hrService.getHr(userId);
-		//	if (hr == null)
-		//	{
-		//		return NotFound("HR not found.");
-		//	}
-		//	return Ok(hr);
-		//}
-
 		[HttpPost("AddHr")]
 		[Authorize(Roles = "Admin")]
 		public async Task<IActionResult> AddHr(RegisterationDTO hr)

@@ -12,5 +12,6 @@ namespace TalentBridge.Entities
 		public string LastName { get; set; }
 
 		public string ResumePath { get; set; }
+		
 	}
 }

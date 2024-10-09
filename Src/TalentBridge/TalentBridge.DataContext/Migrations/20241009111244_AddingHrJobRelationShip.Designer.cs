@@ -12,8 +12,8 @@ using TalentBridge.DataContext;
 namespace TalentBridge.DataContext.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240929153402_Add-Identity")]
-    partial class AddIdentity
+    [Migration("20241009111244_AddingHrJobRelationShip")]
+    partial class AddingHrJobRelationShip
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -190,6 +190,11 @@ namespace TalentBridge.DataContext.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(8)
+                        .HasColumnType("nvarchar(8)");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -255,6 +260,76 @@ namespace TalentBridge.DataContext.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasDiscriminator().HasValue("AppUser");
+
+                    b.UseTphMappingStrategy();
+                });
+
+            modelBuilder.Entity("TalentBridge.Entities.HrJobAssignment", b =>
+                {
+                    b.Property<string>("HrId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("JobId")
+                        .HasColumnType("int");
+
+                    b.HasKey("HrId", "JobId");
+
+                    b.HasIndex("JobId");
+
+                    b.ToTable("HrJobAssignment");
+                });
+
+            modelBuilder.Entity("TalentBridge.Entities.Job", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("ApplicationLimit")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("Deadline")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Describtion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("EmploymentType")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("JobState")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumberOfVacancies")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Requirements")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Job");
+                });
+
+            modelBuilder.Entity("TalentBridge.Entities.Hr", b =>
+                {
+                    b.HasBaseType("TalentBridge.Entities.AppUser");
+
+                    b.HasDiscriminator().HasValue("Hr");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -306,6 +381,35 @@ namespace TalentBridge.DataContext.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("TalentBridge.Entities.HrJobAssignment", b =>
+                {
+                    b.HasOne("TalentBridge.Entities.Hr", "Hr")
+                        .WithMany("HrJobsAssignments")
+                        .HasForeignKey("HrId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TalentBridge.Entities.Job", "Job")
+                        .WithMany("HrJobsAssignments")
+                        .HasForeignKey("JobId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hr");
+
+                    b.Navigation("Job");
+                });
+
+            modelBuilder.Entity("TalentBridge.Entities.Job", b =>
+                {
+                    b.Navigation("HrJobsAssignments");
+                });
+
+            modelBuilder.Entity("TalentBridge.Entities.Hr", b =>
+                {
+                    b.Navigation("HrJobsAssignments");
                 });
 #pragma warning restore 612, 618
         }

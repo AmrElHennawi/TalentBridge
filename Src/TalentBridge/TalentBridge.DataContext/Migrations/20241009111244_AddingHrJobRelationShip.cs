@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TalentBridge.DataContext.Migrations
 {
     /// <inheritdoc />
-    public partial class AddIdentity : Migration
+    public partial class AddingHrJobRelationShip : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -35,6 +35,7 @@ namespace TalentBridge.DataContext.Migrations
                     FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     ResumePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Discriminator = table.Column<string>(type: "nvarchar(8)", maxLength: 8, nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -53,6 +54,27 @@ namespace TalentBridge.DataContext.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Job",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Describtion = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Requirements = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Deadline = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ApplicationLimit = table.Column<int>(type: "int", nullable: true),
+                    Location = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EmploymentType = table.Column<int>(type: "int", nullable: false),
+                    NumberOfVacancies = table.Column<int>(type: "int", nullable: false),
+                    JobState = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Job", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -161,6 +183,30 @@ namespace TalentBridge.DataContext.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "HrJobAssignment",
+                columns: table => new
+                {
+                    HrId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    JobId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HrJobAssignment", x => new { x.HrId, x.JobId });
+                    table.ForeignKey(
+                        name: "FK_HrJobAssignment_AspNetUsers_HrId",
+                        column: x => x.HrId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_HrJobAssignment_Job_JobId",
+                        column: x => x.JobId,
+                        principalTable: "Job",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
@@ -209,6 +255,11 @@ namespace TalentBridge.DataContext.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_HrJobAssignment_JobId",
+                table: "HrJobAssignment",
+                column: "JobId");
         }
 
         /// <inheritdoc />
@@ -230,10 +281,16 @@ namespace TalentBridge.DataContext.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "HrJobAssignment");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Job");
         }
     }
 }
