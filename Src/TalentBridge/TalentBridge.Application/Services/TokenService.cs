@@ -26,14 +26,18 @@ namespace TalentBridge.Application.Services
         {
             var roles = await _userManager.GetRolesAsync(user);
             var roleClaims = roles.Select(role => new Claim(ClaimTypes.Role, role));
+            var claims = new[]
+            {
+	            new Claim(ClaimTypes.NameIdentifier, user.Id),
+            }.Union(roleClaims);
 
-            var securityKey = _jwtSettings.SecretKey;
+			var securityKey = _jwtSettings.SecretKey;
             int numberOfDaysToExpire = rememberMe ? 30 : 1;
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
-                claims:roleClaims,
+                claims: claims,
                 signingCredentials:creds,
                 expires: DateTime.Now.AddDays(numberOfDaysToExpire)
                 );
