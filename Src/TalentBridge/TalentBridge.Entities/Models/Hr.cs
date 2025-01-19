@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TalentBridge.Entities
+namespace TalentBridge.Entities.Models
 {
-    public class Hr:AppUser
+    public class Hr : AppUser
     {
         public List<HrJobAssignment> HrJobsAssignments { get; set; }
     }

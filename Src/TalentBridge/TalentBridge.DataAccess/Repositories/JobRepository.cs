@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using TalentBridge.DataAccess.Repositories.Interfaces;
-using TalentBridge.Entities;
+using TalentBridge.Entities.Models;
 
 namespace TalentBridge.DataAccess.Repositories
 {

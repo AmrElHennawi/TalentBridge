@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TalentBridge.Entities.Enums;
 
-namespace TalentBridge.Entities
+namespace TalentBridge.Entities.Models
 {
     public class Job
     {
@@ -19,7 +19,7 @@ namespace TalentBridge.Entities
         public int? ApplicationLimit { get; set; }
         public string Location { get; set; }
         public EmploymentTypes EmploymentType { get; set; }
-        [Range(1,100)]
+        [Range(1, 100)]
         public int NumberOfVacancies { get; set; }
         public bool JobState { get; set; }
         public List<HrJobAssignment> HrJobsAssignments { get; set; }

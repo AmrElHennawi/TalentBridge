@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("e25abf42-004c-4390-b45e-5a29647bec39")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("TalentBride.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca32f0147bc4f2ce3377eaaf802c00336da43654")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6ff2028335a6666b0bc7a2b92b7f4ba098a2363")]
 [assembly: System.Reflection.AssemblyProductAttribute("TalentBride.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TalentBride.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

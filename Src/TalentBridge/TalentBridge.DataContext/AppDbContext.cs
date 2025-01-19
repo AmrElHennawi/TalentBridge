@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using TalentBridge.Entities;
+using TalentBridge.Entities.Models;
 
 namespace TalentBridge.DataContext
 {
-	public class AppDbContext : IdentityDbContext<Entities.AppUser>
+    public class AppDbContext : IdentityDbContext<Entities.AppUser>
 	{
 		public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
 		{

@@ -2,7 +2,7 @@
 
 using TalentBridge.DataAccess.Repositories;
 using TalentBridge.DataAccess.Repositories.Interfaces;
-using TalentBridge.Entities;
+using TalentBridge.Entities.Models;
 
 namespace TalentBridge.Application.ExtentionMethods
 {
