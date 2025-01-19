@@ -11,25 +11,16 @@ namespace TalentBridge.DataContext
 		{
 		}
 
-        public DbSet<Job> Jobs { get; set; }
+		public DbSet<Job> Jobs { get; set; }
 		public DbSet<HrJobAssignment> HrJobAssignments { get; set; }
+		public DbSet<Application> Applications { get; set; }
+		public DbSet<AddedSections> AddedSections { get; set; }
+		public DbSet<ExtraData> ExtraData { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			base.OnModelCreating(modelBuilder);
-
-            modelBuilder.Entity<HrJobAssignment>()
-                .HasKey(hrJobAssignment => new { hrJobAssignment.HrId, hrJobAssignment.JobId });
-
-            modelBuilder.Entity<HrJobAssignment>()
-                .HasOne(hrJobAssignment => hrJobAssignment.Hr)
-                .WithMany(hrUser => hrUser.HrJobsAssignments)
-                .HasForeignKey(hrJobAssignment => hrJobAssignment.HrId);
-
-            modelBuilder.Entity<HrJobAssignment>()
-                .HasOne(hrJobAssignment => hrJobAssignment.Job)
-                .WithMany(job => job.HrJobsAssignments)
-                .HasForeignKey(hrJobAssignment => hrJobAssignment.JobId);
 
             modelBuilder.Entity<IdentityRole>().HasData(
 				new IdentityRole { Id = "1", Name = "Admin", NormalizedName = "ADMIN" },

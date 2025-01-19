@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Application\\TalentBridge.Application.csproj": {}
+    "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Application\\TalentBridge.Application.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Application\\TalentBridge.Application.csproj": {
+    "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Application\\TalentBridge.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Application\\TalentBridge.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Application\\TalentBridge.Application.csproj",
         "projectName": "TalentBridge.Application",
-        "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Application\\TalentBridge.Application.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Application\\obj\\",
+        "projectPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Application\\TalentBridge.Application.csproj",
+        "packagesPath": "C:\\Users\\Amr Khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Amr Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,19 +26,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "D:\\Microservice\\Project\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\TalentBridge.Core.csproj": {
-                "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\TalentBridge.Core.csproj"
+              "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\TalentBridge.Core.csproj": {
+                "projectPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\TalentBridge.Core.csproj"
               },
-              "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj": {
-                "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj"
+              "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj"
               }
             }
           }
@@ -52,7 +50,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -101,24 +100,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\TalentBridge.Core.csproj": {
+    "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\TalentBridge.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\TalentBridge.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\TalentBridge.Core.csproj",
         "projectName": "TalentBridge.Core",
-        "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\TalentBridge.Core.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\obj\\",
+        "projectPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\TalentBridge.Core.csproj",
+        "packagesPath": "C:\\Users\\Amr Khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Amr Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -127,8 +126,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "D:\\Microservice\\Project\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -146,7 +143,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -195,24 +193,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj": {
+    "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj",
         "projectName": "TalentBridge.DataAccess",
-        "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Amr Khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Amr Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -221,16 +219,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "D:\\Microservice\\Project\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj": {
-                "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj"
+              "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj": {
+                "projectPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj"
               }
             }
           }
@@ -244,7 +240,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -293,24 +290,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj": {
+    "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj",
+        "projectUniqueName": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj",
         "projectName": "TalentBridge.DataContext",
-        "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\obj\\",
+        "projectPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj",
+        "packagesPath": "C:\\Users\\Amr Khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Amr Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -319,16 +316,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "D:\\Microservice\\Project\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\TalentBridge.Entities.csproj": {
-                "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\TalentBridge.Entities.csproj"
+              "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\TalentBridge.Entities.csproj": {
+                "projectPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\TalentBridge.Entities.csproj"
               }
             }
           }
@@ -342,7 +337,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -397,24 +393,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\TalentBridge.Entities.csproj": {
+    "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\TalentBridge.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\TalentBridge.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\TalentBridge.Entities.csproj",
         "projectName": "TalentBridge.Entities",
-        "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\TalentBridge.Entities.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\obj\\",
+        "projectPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\TalentBridge.Entities.csproj",
+        "packagesPath": "C:\\Users\\Amr Khaled\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Amr Khaled\\Desktop\\Programming\\My-Github\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Amr Khaled\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -423,8 +419,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "D:\\Microservice\\Project\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -442,7 +436,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -491,7 +486,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

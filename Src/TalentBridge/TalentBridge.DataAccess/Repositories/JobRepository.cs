@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using TalentBridge.DataAccess.Repositories.Interfaces;
+﻿using TalentBridge.DataAccess.Repositories.Interfaces;
+using TalentBridge.DataContext;
 using TalentBridge.Entities.Models;
 
 namespace TalentBridge.DataAccess.Repositories
 {
     public class JobRepository:IBaseRepository<Job>
     {
-        private readonly DbContext _dbContext;
+        private readonly AppDbContext _dbContext;
 
-        public JobRepository(DbContext dbContext)
+        public JobRepository(AppDbContext dbContext)
         {
             _dbContext = dbContext;
         }

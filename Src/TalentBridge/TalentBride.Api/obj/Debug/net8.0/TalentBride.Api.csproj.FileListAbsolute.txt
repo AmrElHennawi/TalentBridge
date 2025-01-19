@@ -306,3 +306,7 @@ C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBride.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBride.Api\bin\Debug\net8.0\TalentBridge.Core.dll
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBride.Api\bin\Debug\net8.0\TalentBridge.Core.pdb
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBride.Api\bin\Debug\net8.0\TalentBride.Api.staticwebassets.endpoints.json
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBride.Api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBride.Api\obj\Debug\net8.0\staticwebassets\msbuild.TalentBride.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBride.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

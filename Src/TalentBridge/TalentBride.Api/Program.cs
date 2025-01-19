@@ -22,13 +22,12 @@ namespace TalentBride.Api
 
 			// Other services
 			builder.Services.AddScoped<TokenService>();
-            builder.Services.AddService();
-            builder.Services.AddRepository();
+			builder.Services.AddService();
+			builder.Services.AddRepository();
 
-            // Add services to the container.
+			// Add services to the container.
 
-            builder.Services.AddControllers();
-			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+			builder.Services.AddControllers();
 			builder.Services.AddEndpointsApiExplorer();
 			builder.Services.AddSwaggerGen();
 
