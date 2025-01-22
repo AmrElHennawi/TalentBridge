@@ -2055,7 +2055,8 @@
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.8",
           "Microsoft.EntityFrameworkCore": "8.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
+          "TalentBridge.DataAccess": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TalentBridge.Core.dll": {}

@@ -134,7 +134,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj": {
+                "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

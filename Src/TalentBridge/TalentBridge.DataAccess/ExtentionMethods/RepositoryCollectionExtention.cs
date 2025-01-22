@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-
 using TalentBridge.DataAccess.Repositories;
 using TalentBridge.DataAccess.Repositories.Interfaces;
 using TalentBridge.Entities.Models;

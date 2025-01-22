@@ -24,3 +24,5 @@ E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\refint\TalentBridge.Entities.dll
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.pdb
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\ref\TalentBridge.Entities.dll
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\bin\Debug\net8.0\TalentBridge.Entities.runtimeconfig.json
+E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Entities\obj\Debug\net8.0\TalentBridge.Entities.genruntimeconfig.cache
