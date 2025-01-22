@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "QDNtLehRAg/GqWKd8uIN0SsKD8Y1a3K9rv0dYaBdJQ0=",
+  "Hash": "E1jpog8h5LSmtwps16VG/M+GJmoXS7Oc4J2iX6aFjBU=",
   "Source": "TalentBride.Api",
   "BasePath": "_content/TalentBride.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

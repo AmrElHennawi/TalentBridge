@@ -23,6 +23,7 @@ namespace TalentBridge.Entities.Models
         public int NumberOfVacancies { get; set; }
         public bool JobState { get; set; }
         public List<HrJobAssignment> HrJobsAssignments { get; set; }
+        public List<AddedSections> AddedSections { get; set; }
 
     }
 }

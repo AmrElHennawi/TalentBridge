@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TalentBridge.DataContext;
 
@@ -11,9 +12,11 @@ using TalentBridge.DataContext;
 namespace TalentBridge.DataContext.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250119202318_addJob")]
+    partial class addJob
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -205,6 +208,7 @@ namespace TalentBridge.DataContext.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("LinkedIn")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
@@ -261,111 +265,6 @@ namespace TalentBridge.DataContext.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
-                });
-
-            modelBuilder.Entity("TalentBridge.Entities.Models.AddedSections", b =>
-                {
-                    b.Property<int>("AddedSectionsId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AddedSectionsId"));
-
-                    b.Property<int>("JobId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SectionTitle")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("SectionType")
-                        .HasColumnType("int");
-
-                    b.HasKey("AddedSectionsId");
-
-                    b.HasIndex("JobId");
-
-                    b.ToTable("AddedSections");
-                });
-
-            modelBuilder.Entity("TalentBridge.Entities.Models.Application", b =>
-                {
-                    b.Property<int>("ApplicationId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ApplicationId"));
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("JobId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("JobSeekerId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("LinkedIn")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("MilitaryStatus")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Resume")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ApplicationId");
-
-                    b.HasIndex("JobId");
-
-                    b.HasIndex("JobSeekerId");
-
-                    b.ToTable("Applications");
-                });
-
-            modelBuilder.Entity("TalentBridge.Entities.Models.ExtraData", b =>
-                {
-                    b.Property<int>("AddedSectionsId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AddedSectionsId"));
-
-                    b.Property<int>("ApplicationId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Data")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SectionTitle")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("AddedSectionsId");
-
-                    b.HasIndex("ApplicationId");
-
-                    b.ToTable("ExtraData");
                 });
 
             modelBuilder.Entity("TalentBridge.Entities.Models.HrJobAssignment", b =>
@@ -487,47 +386,6 @@ namespace TalentBridge.DataContext.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("TalentBridge.Entities.Models.AddedSections", b =>
-                {
-                    b.HasOne("TalentBridge.Entities.Models.Job", "Job")
-                        .WithMany("AddedSections")
-                        .HasForeignKey("JobId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Job");
-                });
-
-            modelBuilder.Entity("TalentBridge.Entities.Models.Application", b =>
-                {
-                    b.HasOne("TalentBridge.Entities.Models.Job", "Job")
-                        .WithMany()
-                        .HasForeignKey("JobId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TalentBridge.Entities.AppUser", "JobSeeker")
-                        .WithMany("Applications")
-                        .HasForeignKey("JobSeekerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Job");
-
-                    b.Navigation("JobSeeker");
-                });
-
-            modelBuilder.Entity("TalentBridge.Entities.Models.ExtraData", b =>
-                {
-                    b.HasOne("TalentBridge.Entities.Models.Application", "Application")
-                        .WithMany("ExtraData")
-                        .HasForeignKey("ApplicationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Application");
-                });
-
             modelBuilder.Entity("TalentBridge.Entities.Models.HrJobAssignment", b =>
                 {
                     b.HasOne("TalentBridge.Entities.AppUser", "Hr")
@@ -549,20 +407,11 @@ namespace TalentBridge.DataContext.Migrations
 
             modelBuilder.Entity("TalentBridge.Entities.AppUser", b =>
                 {
-                    b.Navigation("Applications");
-
                     b.Navigation("HrJobsAssignments");
-                });
-
-            modelBuilder.Entity("TalentBridge.Entities.Models.Application", b =>
-                {
-                    b.Navigation("ExtraData");
                 });
 
             modelBuilder.Entity("TalentBridge.Entities.Models.Job", b =>
                 {
-                    b.Navigation("AddedSections");
-
                     b.Navigation("HrJobsAssignments");
                 });
 #pragma warning restore 612, 618

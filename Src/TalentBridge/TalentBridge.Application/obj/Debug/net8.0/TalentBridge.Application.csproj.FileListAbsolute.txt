@@ -42,5 +42,10 @@ C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\
 C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Application\bin\Debug\net8.0\TalentBridge.Core.pdb
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Application\bin\Debug\net8.0\TalentBridge.Core.dll
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Application\bin\Debug\net8.0\TalentBridge.Core.pdb
+<<<<<<< HEAD
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Application\bin\Debug\net8.0\TalentBridge.Application.runtimeconfig.json
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.Application\obj\Debug\net8.0\TalentBridge.Application.genruntimeconfig.cache
+=======
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Application\bin\Debug\net8.0\TalentBridge.Application.runtimeconfig.json
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.Application\obj\Debug\net8.0\TalentBridge.Application.genruntimeconfig.cache
+>>>>>>> 1ba493e37d60b3c52c3f45e2728d7f8a00fe1edd

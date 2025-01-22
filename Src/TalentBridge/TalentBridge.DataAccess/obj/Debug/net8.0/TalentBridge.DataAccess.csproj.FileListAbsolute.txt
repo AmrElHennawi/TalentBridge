@@ -34,5 +34,10 @@ E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\refint\TalentBridge.DataAccess.dll
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\TalentBridge.DataAccess.pdb
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\ref\TalentBridge.DataAccess.dll
+<<<<<<< HEAD
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\bin\Debug\net8.0\TalentBridge.DataAccess.runtimeconfig.json
 E:\Projects\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\TalentBridge.DataAccess.genruntimeconfig.cache
+=======
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\bin\Debug\net8.0\TalentBridge.DataAccess.runtimeconfig.json
+C:\Users\Amr Khaled\Desktop\Programming\My-Github\TalentBridge\Src\TalentBridge\TalentBridge.DataAccess\obj\Debug\net8.0\TalentBridge.DataAccess.genruntimeconfig.cache
+>>>>>>> 1ba493e37d60b3c52c3f45e2728d7f8a00fe1edd
