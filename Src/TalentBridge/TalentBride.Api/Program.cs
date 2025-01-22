@@ -8,8 +8,10 @@ using TalentBridge.Application.Services;
 using TalentBridge.Core.Settings;
 using TalentBridge.DataAccess.Interfaces;
 using TalentBridge.DataAccess;
+using TalentBridge.DataAccess.Repositories;
 using TalentBridge.DataContext;
 using TalentBridge.Entities;
+using TalentBridge.Entities.Models;
 
 namespace TalentBride.Api
 {
@@ -27,6 +29,7 @@ namespace TalentBride.Api
 			builder.Services.AddService();
 			builder.Services.AddRepository();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+			builder.Services.AddScoped<IBaseRepository<Job>, JobRepository>();
 
 
             // Add services to the container.
