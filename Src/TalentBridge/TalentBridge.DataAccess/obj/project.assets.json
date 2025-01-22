@@ -1941,6 +1941,23 @@
           }
         }
       },
+      "TalentBridge.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8",
+          "Microsoft.AspNetCore.Identity": "2.2.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.8",
+          "Microsoft.EntityFrameworkCore": "8.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
+        },
+        "compile": {
+          "bin/placeholder/TalentBridge.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TalentBridge.Core.dll": {}
+        }
+      },
       "TalentBridge.DataContext/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -4762,6 +4779,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "TalentBridge.Core/1.0.0": {
+      "type": "project",
+      "path": "../TalentBridge.Core/TalentBridge.Core.csproj",
+      "msbuildProject": "../TalentBridge.Core/TalentBridge.Core.csproj"
+    },
     "TalentBridge.DataContext/1.0.0": {
       "type": "project",
       "path": "../TalentBridge.DataContext/TalentBridge.DataContext.csproj",
@@ -4781,6 +4803,7 @@
       "Microsoft.EntityFrameworkCore >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.8",
+      "TalentBridge.Core >= 1.0.0",
       "TalentBridge.DataContext >= 1.0.0"
     ]
   },
@@ -4818,6 +4841,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\TalentBridge.Core.csproj": {
+              "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\TalentBridge.Core.csproj"
+            },
             "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj": {
               "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj"
             }

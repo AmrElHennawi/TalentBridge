@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TalentBride.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d85177dce9ea84467e2e361dff3791fd48e3dcb0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6f990fe068723285db9313a9e3e0fe30dd0abbd")]
 [assembly: System.Reflection.AssemblyProductAttribute("TalentBride.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TalentBride.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TalentBridge.DataAccess.Repositories.Interfaces
+namespace TalentBridge.DataAccess.Interfaces
 {
 
     public interface IBaseRepository<T> where T : class

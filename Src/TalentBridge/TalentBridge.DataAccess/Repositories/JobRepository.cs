@@ -1,4 +1,5 @@
-﻿using TalentBridge.DataAccess.Repositories.Interfaces;
+﻿
+using TalentBridge.DataAccess.Interfaces;
 using TalentBridge.DataContext;
 using TalentBridge.Entities.Models;
 

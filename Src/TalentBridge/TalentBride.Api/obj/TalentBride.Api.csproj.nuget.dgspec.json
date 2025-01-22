@@ -239,11 +239,7 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {
-              "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj": {
-                "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataAccess\\TalentBridge.DataAccess.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -338,6 +334,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\TalentBridge.Core.csproj": {
+                "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.Core\\TalentBridge.Core.csproj"
+              },
               "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj": {
                 "projectPath": "E:\\Projects\\TalentBridge\\Src\\TalentBridge\\TalentBridge.DataContext\\TalentBridge.DataContext.csproj"
               }

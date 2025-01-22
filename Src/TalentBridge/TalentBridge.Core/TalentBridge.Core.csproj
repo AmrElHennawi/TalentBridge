@@ -18,8 +18,4 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\TalentBridge.DataAccess\TalentBridge.DataAccess.csproj" />
-  </ItemGroup>
-
 </Project>

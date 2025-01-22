@@ -6,6 +6,8 @@ using Microsoft.IdentityModel.Tokens;
 using TalentBridge.Application.ExtentionMethods;
 using TalentBridge.Application.Services;
 using TalentBridge.Core.Settings;
+using TalentBridge.DataAccess.Interfaces;
+using TalentBridge.DataAccess;
 using TalentBridge.DataContext;
 using TalentBridge.Entities;
 
@@ -24,10 +26,12 @@ namespace TalentBride.Api
 			builder.Services.AddScoped<TokenService>();
 			builder.Services.AddService();
 			builder.Services.AddRepository();
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-			// Add services to the container.
 
-			builder.Services.AddControllers();
+            // Add services to the container.
+
+            builder.Services.AddControllers();
 			builder.Services.AddEndpointsApiExplorer();
 			builder.Services.AddSwaggerGen();
 

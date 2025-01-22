@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TalentBridge.Core\TalentBridge.Core.csproj" />
     <ProjectReference Include="..\TalentBridge.DataContext\TalentBridge.DataContext.csproj" />
   </ItemGroup>
 
