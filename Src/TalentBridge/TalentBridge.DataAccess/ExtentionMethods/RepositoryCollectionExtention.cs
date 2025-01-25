@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using TalentBridge.DataAccess;
+using TalentBridge.DataAccess.Interfaces;
 using TalentBridge.DataAccess.Repositories;
-using TalentBridge.DataAccess.Repositories.Interfaces;
-using TalentBridge.Entities.Models;
 
 namespace TalentBridge.Application.ExtentionMethods
 {
@@ -9,7 +9,8 @@ namespace TalentBridge.Application.ExtentionMethods
     {
         public static IServiceCollection AddRepository(this IServiceCollection service)
             => service
-                .AddScoped<IBaseRepository<Job>, JobRepository>();
+                .AddScoped<IUnitOfWork, UnitOfWork>()
+                .AddScoped<IHrRepository, HrRepository>();
 
     }
 }

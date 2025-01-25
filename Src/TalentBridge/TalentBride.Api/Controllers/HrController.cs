@@ -43,15 +43,13 @@ namespace TalentBride.Api.Controllers
 		[Authorize(Roles = "Admin")]
 		public async Task<IActionResult> AddHr(RegisterationDTO hr)
 		{
-			try
+			var result = await _hrService.addHr(hr);
+			if (!result)
 			{
-				var addedHr = await _hrService.addHr(hr);
-				return Ok(addedHr);
+				return BadRequest("Failed to add HR.");
 			}
-			catch (Exception ex)
-			{
-				return BadRequest(ex.Message);
-			}
+			return Ok("HR added successfully.");
+
 		}
 
 
@@ -59,30 +57,29 @@ namespace TalentBride.Api.Controllers
 		[Authorize(Roles = "Admin")]
 		public async Task<IActionResult> UpdateHr(string id, UpdateInfoDTO hr)
 		{
-			try
+
+			var result = await _hrService.updateHr(id, hr);
+			if (!result)
 			{
-				var updatedHr = await _hrService.updateHr(id, hr);
-				return Ok(updatedHr);
+				return BadRequest("Failed to update HR.");
 			}
-			catch (Exception ex)
-			{
-				return BadRequest(ex.Message);
-			}
+			return Ok("HR updated successfully.");
+
 		}
 
 		[HttpDelete("RemoveHr/{id}")]
 		[Authorize(Roles = "Admin")]
 		public async Task<IActionResult> RemoveHr(string id)
 		{
-			try
+
+				var result = await _hrService.removeHr(id);
+			if (!result)
 			{
-				await _hrService.removeHr(id);
-				return Ok("HR deleted successfully.");
+				return BadRequest("Failed to delete HR.");
 			}
-			catch (Exception ex)
-			{
-				return BadRequest(ex.Message);
-			}
+			return Ok("HR deleted successfully.");
+
+
 		}
 	}
 }

@@ -1,50 +1,37 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using TalentBridge.Application.DTOs;
+﻿using TalentBridge.Application.DTOs;
+using TalentBridge.DataAccess.Interfaces;
 using TalentBridge.Entities;
 
 namespace TalentBridge.Application.Services
 {
     public class HrService
     {
-        private readonly UserManager<AppUser> _userManager;
-        public HrService(UserManager<AppUser> userManager)
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IHrRepository _hrRepository;
+        public HrService(IUnitOfWork unitOfWork, IHrRepository hrRepository)
         {
-            _userManager = userManager;
+            _unitOfWork = unitOfWork;
+            _hrRepository = hrRepository;
         }
 
         public async Task<IEnumerable<AppUser>> getAllHrs()
         {
-            var users = await _userManager.Users.ToListAsync();
-            var Hrs = new List<AppUser>();
-
-            foreach (var user in users)
-            {
-                var roles = await _userManager.GetRolesAsync(user);
-                if (roles.Contains("Hr"))
-                {
-                    Hrs.Add(user);
-                }
-            }
+            var Hrs = await _hrRepository.GetAllHrsAsync();
             return Hrs;
         }
 
         public async Task<AppUser> getHr(string id)
         {
-            var user = await _userManager.FindByIdAsync(id);
+            var user = await _hrRepository.GetHrByIdAsync(id);
             if (user == null)
             {
                 throw new Exception("User not found.");
             }
-            var roles = await _userManager.GetRolesAsync(user);
-            if (!roles.Contains("Hr"))
-            {
-                throw new Exception("User is not an HR.");
-            }
+
             return user;
         }
 
-        public async Task<AppUser> addHr(RegisterationDTO registerData)
+        public async Task<bool> addHr(RegisterationDTO registerData)
         {
             var hr = new AppUser()
             {
@@ -53,28 +40,17 @@ namespace TalentBridge.Application.Services
                 Email = registerData.Email,
                 PhoneNumber = registerData.PhoneNumber,
                 UserName = registerData.Username,
-                ResumePath = " "
+                ResumePath = string.Empty 
             };
 
-            var createResult = await _userManager.CreateAsync(hr, registerData.Password);
-            if (!createResult.Succeeded)
-            {
-                throw new Exception("Registration failed: " + string.Join(", ", createResult.Errors.Select(e => e.Description)));
-            }
-
-
-            var addRoleResult = await _userManager.AddToRoleAsync(hr, "Hr");
-            if (!addRoleResult.Succeeded)
-            {
-                throw new Exception("Failed to add HR role to user.");
-            }
-
-            return hr;
+            var createResult = await _hrRepository.CreateHrAsync(hr, registerData.Password);
+            return createResult.Succeeded;
         }
 
-        public async Task<AppUser> updateHr(string id, UpdateInfoDTO registerData)
+        public async Task<bool> updateHr(string id, UpdateInfoDTO registerData)
         {
-            var hr = await _userManager.FindByIdAsync(id);
+            bool result = false;
+            var hr = await _hrRepository.GetHrByIdAsync(id);
             if (hr == null)
             {
                 throw new Exception("User not found.");
@@ -86,28 +62,31 @@ namespace TalentBridge.Application.Services
             hr.PhoneNumber = registerData.PhoneNumber;
             hr.UserName = registerData.Username;
 
-            var updateResult = await _userManager.UpdateAsync(hr);
-            if (!updateResult.Succeeded)
+            var updateResult = await _hrRepository.UpdateHrAsync(hr);
+            if (updateResult.Succeeded)
             {
-                throw new Exception("Failed to update user: " + string.Join(", ", updateResult.Errors.Select(e => e.Description)));
+                result = true;
             }
 
-            return hr;
+            return result;
         }
 
-        public async Task removeHr(string id)
+        public async Task<bool> removeHr(string id)
         {
-            var hr = await _userManager.FindByIdAsync(id);
+            bool result = false;
+            var hr = await _hrRepository.GetHrByIdAsync(id);
             if (hr == null)
             {
                 throw new Exception("User not found.");
             }
 
-            var deleteResult = await _userManager.DeleteAsync(hr);
+            var deleteResult = await _hrRepository.DeleteHrAsync(hr);
             if (!deleteResult.Succeeded)
             {
-                throw new Exception("Failed to delete user: " + string.Join(", ", deleteResult.Errors.Select(e => e.Description)));
+                result = true;
             }
+
+            return result;
         }
 
     }
