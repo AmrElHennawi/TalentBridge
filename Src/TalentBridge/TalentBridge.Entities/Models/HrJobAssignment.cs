@@ -13,4 +13,5 @@ namespace TalentBridge.Entities.Models
         public AppUser Hr { get; set; }
         public Job Job { get; set; }
     }
+    
 }
