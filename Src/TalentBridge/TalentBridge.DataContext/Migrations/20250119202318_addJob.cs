@@ -49,7 +49,7 @@ namespace TalentBridge.DataContext.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Describtion = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Requirements = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Deadline = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ApplicationLimit = table.Column<int>(type: "int", nullable: true),
@@ -137,7 +137,7 @@ namespace TalentBridge.DataContext.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ApplicationLimit = table.Column<int>(type: "int", nullable: true),
                     Deadline = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Describtion = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EmploymentType = table.Column<int>(type: "int", nullable: false),
                     JobState = table.Column<bool>(type: "bit", nullable: false),
                     Location = table.Column<string>(type: "nvarchar(max)", nullable: false),

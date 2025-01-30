@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using TalentBridge.Application.DTOs;
 using TalentBridge.DataAccess.Interfaces;
 using TalentBridge.Entities;
@@ -14,22 +9,20 @@ namespace TalentBridge.Application.Services
     public class JobService
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IHrRepository _hrRepository;
         private readonly UserManager<AppUser> _userManager;
 
-        public JobService(IUnitOfWork unitOfWork, IHrRepository hrRepository, UserManager<AppUser> userManager)
+        public JobService(IUnitOfWork unitOfWork, UserManager<AppUser> userManager)
         {
             _unitOfWork = unitOfWork;
-            _hrRepository = hrRepository;
             _userManager = userManager;
         }
 
         public async Task<bool> AddJob(AddJobDTO addJobDto)
         {
-            var addedJob = new Job()
+            var job = new Job()
             {
                 Title = addJobDto.Title,
-                Describtion = addJobDto.Describtion,
+                Description = addJobDto.Description,
                 Requirements = addJobDto.Requirements,
                 Deadline = addJobDto.Deadline,
                 ApplicationLimit = addJobDto.ApplicationLimit,
@@ -37,23 +30,54 @@ namespace TalentBridge.Application.Services
                 EmploymentType = addJobDto.EmploymentType,
                 NumberOfVacancies = addJobDto.NumberOfVacancies,
                 JobState = addJobDto.JobState,
-                AddedSections = addJobDto.AddedSections
             };
-            foreach (var assignedHr in addJobDto.AssignedHrs)
+
+
+            await _unitOfWork.Jobs.AddAsync(job);
+            await _unitOfWork.CompleteAsync();
+
+
+            foreach (var addedSection in addJobDto.AddedSections)
             {
-                if (await _userManager.IsInRoleAsync(assignedHr, "Hr"))
+                _unitOfWork.AddedSections.AddAsync(new AddedSections
                 {
-                    addedJob.HrJobsAssignments.Add(new HrJobAssignment()
-                    {
-                        JobId = addedJob.Id,
-                        HrId = assignedHr.Id
-                    });
-                }
-                else
-                {
-                    return false;
-                }
+                    JobId = job.Id,
+                    SectionType = addedSection.SectionType,
+                    SectionTitle = addedSection.SectionTitle
+                });
             }
+
+            await _unitOfWork.CompleteAsync();
+
+
+
+            var hrUsers = await _userManager.GetUsersInRoleAsync("Hr");
+            var AdminUsers = await _userManager.GetUsersInRoleAsync("Admin");
+            var validHrs = hrUsers.Where(u => addJobDto.AssignedHrIds.Contains(u.Id)).ToList();
+
+            if (validHrs.Count != addJobDto.AssignedHrIds.Count)
+                return false;
+
+            foreach (var hr in validHrs)
+            {
+                _unitOfWork.HrJobAssignments.AddAsync(new HrJobAssignment
+                {
+                    JobId = job.Id,
+                    HrId = hr.Id
+                });
+            }
+
+            foreach (var Admin in AdminUsers)
+            {
+                _unitOfWork.HrJobAssignments.AddAsync(new HrJobAssignment
+                {
+                    JobId = job.Id,
+                    HrId = Admin.Id
+                });
+            }
+
+            await _unitOfWork.CompleteAsync();
+
             return true;
         }
 
@@ -61,20 +85,45 @@ namespace TalentBridge.Application.Services
         {
             return await _unitOfWork.Jobs.GetByIdAsync(jobId);
         }
-        public async Task<IEnumerable<Job>> GetJobs()
+
+        public async Task<IEnumerable<GetJobsByHrIdDTO>> GetAllJobs()
         {
-            return await _unitOfWork.Jobs.GetAllAsync();
+            var jobsByHrId = await _unitOfWork.Jobs.GetAllJobs();
+            IEnumerable<GetJobsByHrIdDTO> jobs = jobsByHrId.Select(j => new GetJobsByHrIdDTO
+            {
+                Id = j.Id,
+                Title = j.Title,
+                Description = j.Description,
+                Requirements = j.Requirements,
+                Deadline = j.Deadline,
+                ApplicationLimit = j.ApplicationLimit,
+                Location = j.Location,
+                EmploymentType = j.EmploymentType,
+                NumberOfVacancies = j.NumberOfVacancies,
+                JobState = j.JobState,
+                AddedSections = j.AddedSections.Select(s => new AddedSectionsDTO
+                {
+                    SectionType = s.SectionType,
+                    SectionTitle = s.SectionTitle
+                }).ToList()
+            }).ToList();
+
+            return jobs;
         }
-        public async Task<bool> UpdateJob(int jobId, UpdateJobDTO updateJobDto)
+
+        public async Task<bool> UpdateJob(UpdateJobDTO updateJobDto)
         {
-            var oldJob = await _unitOfWork.Jobs.GetByIdAsync(jobId);
+            var oldJob = await _unitOfWork.Jobs.GetByIdAsync(updateJobDto.Id);
             if (oldJob == null)
+            {
                 return false;
+            }
+
             var updatedJob = new Job()
             {
-                Id = jobId,
+                Id = updateJobDto.Id,
                 Title = updateJobDto.Title,
-                Describtion = updateJobDto.Describtion,
+                Description = updateJobDto.Description,
                 Requirements = updateJobDto.Requirements,
                 Deadline = updateJobDto.Deadline,
                 ApplicationLimit = updateJobDto.ApplicationLimit,
@@ -84,19 +133,69 @@ namespace TalentBridge.Application.Services
                 JobState = updateJobDto.JobState,
                 AddedSections = updateJobDto.AddedSections
             };
+
             await _unitOfWork.Jobs.UpdateAsync(updatedJob);
+            await _unitOfWork.CompleteAsync();
             return true;
         }
+
         public async Task<bool> DeleteJob(int jobId)
         {
             var job = await _unitOfWork.Jobs.GetByIdAsync(jobId);
             if (job == null)
                 return false;
-            
+
             await _unitOfWork.Jobs.DeleteAsync(jobId);
+            await _unitOfWork.CompleteAsync();
             return true;
         }
+        public async Task<bool> LockJob(int jobId)
+        {
+            var job = await _unitOfWork.Jobs.GetByIdAsync(jobId);
+            if (job == null)
+                return false;
+            job.JobState = false;
+            await _unitOfWork.Jobs.UpdateAsync(job);
+            await _unitOfWork.CompleteAsync();
+            return true;
 
-        
+        }
+        public async Task<bool> UnlockJob(int jobId)
+        {
+            var job = await _unitOfWork.Jobs.GetByIdAsync(jobId);
+            if (job == null)
+                return false;
+            job.JobState = true;
+            await _unitOfWork.Jobs.UpdateAsync(job);
+            await _unitOfWork.CompleteAsync();
+            return true;
+
+        }
+
+        public async Task<IEnumerable<GetJobsByHrIdDTO>> GetJobsByHrId(string hrId)
+        {
+            var jobsByHrId = await _unitOfWork.Jobs.GetJobsByHrId(hrId);
+            IEnumerable<GetJobsByHrIdDTO> jobs = jobsByHrId.Select(j => new GetJobsByHrIdDTO
+            {
+                Id = j.Id,
+                Title = j.Title,
+                Description = j.Description,
+                Requirements = j.Requirements,
+                Deadline = j.Deadline,
+                ApplicationLimit = j.ApplicationLimit,
+                Location = j.Location,
+                EmploymentType = j.EmploymentType,
+                NumberOfVacancies = j.NumberOfVacancies,
+                JobState = j.JobState,
+                AddedSections = j.AddedSections.Select(s => new AddedSectionsDTO
+                {
+                    SectionType = s.SectionType,
+                    SectionTitle = s.SectionTitle
+                }).ToList()
+            }).ToList();
+
+            return jobs;
+        }
+
     }
 }

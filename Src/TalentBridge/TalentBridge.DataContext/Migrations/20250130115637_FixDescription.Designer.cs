@@ -12,8 +12,8 @@ using TalentBridge.DataContext;
 namespace TalentBridge.DataContext.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250119205634_addApplicationContext")]
-    partial class addApplicationContext
+    [Migration("20250130115637_FixDescription")]
+    partial class FixDescription
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
