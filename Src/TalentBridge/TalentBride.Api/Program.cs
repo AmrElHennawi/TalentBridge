@@ -29,7 +29,6 @@ namespace TalentBride.Api
 			builder.Services.AddService();
 			builder.Services.AddRepository();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-			builder.Services.AddScoped<IBaseRepository<Job>, JobRepository>();
 
 
             // Add services to the container.

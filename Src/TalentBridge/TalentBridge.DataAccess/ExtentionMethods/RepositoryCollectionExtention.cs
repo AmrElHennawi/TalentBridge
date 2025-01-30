@@ -9,8 +9,6 @@ namespace TalentBridge.Application.ExtentionMethods
     {
         public static IServiceCollection AddRepository(this IServiceCollection service)
             => service
-                .AddScoped<IUnitOfWork, UnitOfWork>()
-                .AddScoped<IHrRepository, HrRepository>();
-
+                .AddScoped<IUnitOfWork, UnitOfWork>();
     }
 }

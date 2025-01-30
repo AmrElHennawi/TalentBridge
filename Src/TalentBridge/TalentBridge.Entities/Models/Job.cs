@@ -7,7 +7,7 @@ namespace TalentBridge.Entities.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public string Describtion { get; set; }
+        public string Description { get; set; }
         public string Requirements { get; set; }
         public DateTime? Deadline { get; set; }
         [Range(1, int.MaxValue)]

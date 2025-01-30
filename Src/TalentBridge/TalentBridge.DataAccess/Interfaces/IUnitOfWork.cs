@@ -7,12 +7,13 @@ namespace TalentBridge.DataAccess.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {
-        IBaseRepository<Job> Jobs { get; }
-        IBaseRepository<Entities.Models.Application> Applications { get; }
-        IBaseRepository<AddedSections> AddedSections { get; }
-        IBaseRepository<ExtraData> ExtraData { get; }
-        IBaseRepository<HrJobAssignment> HrJobAssignments { get; }
+        IJobRepository Jobs { get; }
+        IApplicationRepository Applications { get; }
+        IAddedSetionsRepository AddedSections { get; }
+        IExtraDataRepository ExtraData { get; }
+        IHrJobAssignmentRepository HrJobAssignments { get; }
+        IHrRepository Hrs { get; }
 
-        int Complete();
+        Task<int> CompleteAsync();
     }
 }
