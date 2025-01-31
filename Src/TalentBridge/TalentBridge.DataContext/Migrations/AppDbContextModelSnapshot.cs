@@ -310,7 +310,6 @@ namespace TalentBridge.DataContext.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("JobSeekerId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LastName")
@@ -332,6 +331,9 @@ namespace TalentBridge.DataContext.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.HasKey("ApplicationId");
 
                     b.HasIndex("JobId");
@@ -343,11 +345,15 @@ namespace TalentBridge.DataContext.Migrations
 
             modelBuilder.Entity("TalentBridge.Entities.Models.ExtraData", b =>
                 {
-                    b.Property<int>("AddedSectionsId")
+                    b.Property<int>("ExtraDataId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AddedSectionsId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ExtraDataId"));
+
+                    b.Property<int>("AddedSectionsId")
+                        .HasMaxLength(50)
+                        .HasColumnType("int");
 
                     b.Property<int>("ApplicationId")
                         .HasColumnType("int");
@@ -356,12 +362,7 @@ namespace TalentBridge.DataContext.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SectionTitle")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("AddedSectionsId");
+                    b.HasKey("ExtraDataId");
 
                     b.HasIndex("ApplicationId");
 
@@ -508,9 +509,7 @@ namespace TalentBridge.DataContext.Migrations
 
                     b.HasOne("TalentBridge.Entities.AppUser", "JobSeeker")
                         .WithMany("Applications")
-                        .HasForeignKey("JobSeekerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("JobSeekerId");
 
                     b.Navigation("Job");
 

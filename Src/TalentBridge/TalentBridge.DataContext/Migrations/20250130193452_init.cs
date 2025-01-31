@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TalentBridge.DataContext.Migrations
 {
     /// <inheritdoc />
-    public partial class AddingHrJobRelationShip : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -35,7 +35,9 @@ namespace TalentBridge.DataContext.Migrations
                     FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     ResumePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Discriminator = table.Column<string>(type: "nvarchar(8)", maxLength: 8, nullable: false),
+                    LinkedIn = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MilitaryStatus = table.Column<int>(type: "int", nullable: false),
+                    State = table.Column<bool>(type: "bit", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -57,7 +59,7 @@ namespace TalentBridge.DataContext.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Job",
+                name: "Jobs",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -74,7 +76,7 @@ namespace TalentBridge.DataContext.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Job", x => x.Id);
+                    table.PrimaryKey("PK_Jobs", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -184,26 +186,102 @@ namespace TalentBridge.DataContext.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "HrJobAssignment",
+                name: "AddedSections",
                 columns: table => new
                 {
+                    AddedSectionsId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SectionTitle = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    SectionType = table.Column<int>(type: "int", nullable: false),
+                    JobId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AddedSections", x => x.AddedSectionsId);
+                    table.ForeignKey(
+                        name: "FK_AddedSections_Jobs_JobId",
+                        column: x => x.JobId,
+                        principalTable: "Jobs",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Applications",
+                columns: table => new
+                {
+                    ApplicationId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Resume = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LinkedIn = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MilitaryStatus = table.Column<int>(type: "int", nullable: false),
+                    JobSeekerId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    JobId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Applications", x => x.ApplicationId);
+                    table.ForeignKey(
+                        name: "FK_Applications_AspNetUsers_JobSeekerId",
+                        column: x => x.JobSeekerId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Applications_Jobs_JobId",
+                        column: x => x.JobId,
+                        principalTable: "Jobs",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "HrJobAssignments",
+                columns: table => new
+                {
+                    HrJobAssignmentId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     HrId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     JobId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_HrJobAssignment", x => new { x.HrId, x.JobId });
+                    table.PrimaryKey("PK_HrJobAssignments", x => x.HrJobAssignmentId);
                     table.ForeignKey(
-                        name: "FK_HrJobAssignment_AspNetUsers_HrId",
+                        name: "FK_HrJobAssignments_AspNetUsers_HrId",
                         column: x => x.HrId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_HrJobAssignment_Job_JobId",
+                        name: "FK_HrJobAssignments_Jobs_JobId",
                         column: x => x.JobId,
-                        principalTable: "Job",
+                        principalTable: "Jobs",
                         principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ExtraData",
+                columns: table => new
+                {
+                    ExtraDataId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    AddedSectionsId = table.Column<int>(type: "int", maxLength: 50, nullable: false),
+                    Data = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ApplicationId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ExtraData", x => x.ExtraDataId);
+                    table.ForeignKey(
+                        name: "FK_ExtraData_Applications_ApplicationId",
+                        column: x => x.ApplicationId,
+                        principalTable: "Applications",
+                        principalColumn: "ApplicationId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -216,6 +294,21 @@ namespace TalentBridge.DataContext.Migrations
                     { "2", null, "Hr", "HR" },
                     { "3", null, "User", "USER" }
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AddedSections_JobId",
+                table: "AddedSections",
+                column: "JobId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Applications_JobId",
+                table: "Applications",
+                column: "JobId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Applications_JobSeekerId",
+                table: "Applications",
+                column: "JobSeekerId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -257,14 +350,27 @@ namespace TalentBridge.DataContext.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_HrJobAssignment_JobId",
-                table: "HrJobAssignment",
+                name: "IX_ExtraData_ApplicationId",
+                table: "ExtraData",
+                column: "ApplicationId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_HrJobAssignments_HrId",
+                table: "HrJobAssignments",
+                column: "HrId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_HrJobAssignments_JobId",
+                table: "HrJobAssignments",
                 column: "JobId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "AddedSections");
+
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -281,16 +387,22 @@ namespace TalentBridge.DataContext.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "HrJobAssignment");
+                name: "ExtraData");
+
+            migrationBuilder.DropTable(
+                name: "HrJobAssignments");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
+                name: "Applications");
+
+            migrationBuilder.DropTable(
                 name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "Job");
+                name: "Jobs");
         }
     }
 }
