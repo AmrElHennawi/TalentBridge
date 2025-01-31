@@ -11,9 +11,14 @@ namespace TalentBridge.DataAccess.Repositories
         {
         }
 
-        public async Task<List<AddedSections>> getAddedSectionsByJobId(int JobId)
+        public async Task<List<AddedSections>> GetAddedSectionsByJobId(int JobId)
         {
             return await _context.AddedSections.Where(s => s.JobId == JobId).AsNoTracking().ToListAsync();
+        }
+
+        public async Task<string> GetTitleBySectionId(int SectionId)
+        {
+            return await _context.AddedSections.Where(s => s.AddedSectionsId == SectionId).Select(s => s.SectionTitle).FirstOrDefaultAsync();
         }
     }
 

@@ -5,6 +5,7 @@ namespace TalentBridge.DataAccess.Interfaces
 {
     public interface IAddedSetionsRepository : IBaseRepository<Entities.Models.AddedSections>
     {
-        Task<List<AddedSections>> getAddedSectionsByJobId(int JobId);
+        Task<List<AddedSections>> GetAddedSectionsByJobId(int JobId);
+        Task<string> GetTitleBySectionId(int SectionId);
     }
 }

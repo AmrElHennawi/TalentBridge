@@ -6,15 +6,16 @@ namespace TalentBridge.Entities.Models
 {
 	public class ExtraData
 	{
-		[Key] public int AddedSectionsId { get; set; }
+		[Key] 
+		public int ExtraDataId { get; set; }
 
-		[MaxLength(50)] public string SectionTitle { get; set; }
+		[MaxLength(50)] 
+		public int AddedSectionsId { get; set; }
 
 		public string Data { get; set; }
 
 		public int ApplicationId { get; set; }
 
-		// Navigation property
 		public Application Application { get; set; }
 	}
 }

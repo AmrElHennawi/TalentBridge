@@ -1,5 +1,4 @@
-﻿
-namespace TalentBridge.Entities.Enums
+﻿namespace TalentBridge.Entities.Enums
 {
 	public enum SectionTypes
 	{

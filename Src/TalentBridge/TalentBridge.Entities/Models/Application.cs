@@ -28,8 +28,10 @@ namespace TalentBridge.Entities.Models
 
 		public MilitaryStatusTypes MilitaryStatus { get; set; }
 
+		public ApplicationStatus Status { get; set; } = ApplicationStatus.New;
+
 		[ForeignKey("AppUser")]
-		public string JobSeekerId { get; set; }
+		public string? JobSeekerId { get; set; }
 
 		[ForeignKey("Job")]
         public int JobId { get; set; }

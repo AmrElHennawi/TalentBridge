@@ -39,7 +39,7 @@ namespace TalentBridge.Application.Services
 
             foreach (var addedSection in addJobDto.AddedSections)
             {
-                _unitOfWork.AddedSections.AddAsync(new AddedSections
+                await _unitOfWork.AddedSections.AddAsync(new AddedSections
                 {
                     JobId = job.Id,
                     SectionType = addedSection.SectionType,
@@ -60,7 +60,7 @@ namespace TalentBridge.Application.Services
 
             foreach (var hr in validHrs)
             {
-                _unitOfWork.HrJobAssignments.AddAsync(new HrJobAssignment
+                await _unitOfWork.HrJobAssignments.AddAsync(new HrJobAssignment
                 {
                     JobId = job.Id,
                     HrId = hr.Id
@@ -69,7 +69,7 @@ namespace TalentBridge.Application.Services
 
             foreach (var Admin in AdminUsers)
             {
-                _unitOfWork.HrJobAssignments.AddAsync(new HrJobAssignment
+                await _unitOfWork.HrJobAssignments.AddAsync(new HrJobAssignment
                 {
                     JobId = job.Id,
                     HrId = Admin.Id

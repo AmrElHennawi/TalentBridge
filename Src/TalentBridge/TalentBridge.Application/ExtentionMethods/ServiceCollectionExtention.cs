@@ -9,6 +9,7 @@ namespace TalentBridge.Application.ExtentionMethods
             => service
                 .AddScoped<AuthenticationService>()
                 .AddScoped<HrService>()
-                .AddScoped<JobService>();
+                .AddScoped<JobService>()
+                .AddScoped<ApplicationService>();
     }
 }
